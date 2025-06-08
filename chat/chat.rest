@@ -1,0 +1,66 @@
+# Include the authentication token in headers:
+# Authorization: Token <your_token>
+
+# Endpoints:
+
+# GET /chat/chat-rooms/ - List user's chat rooms
+
+# POST /chat/start-chat/<user_id>/ - Start private chat
+
+# GET/POST /chat/messages/<room_id>/ - Get/send messages
+
+# GET/POST /chat/friends/ - List friends/add friend
+
+# GET/PATCH /chat/friend-requests/ - List/handle friend requests
+
+
+###  
+GET http://localhost:8000/chat/chat-rooms/
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+####
+post http://localhost:8000/chat/start-chat/3/
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+
+
+#### get post 
+get http://localhost:8000/chat/messages/2/
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+{
+    
+    "content" : "hi"
+}
+
+#### GET/POST /chat/friends
+get http://localhost:8000/chat/friends/
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+
+#### get patch /chat/friend-requests/
+get  http://localhost:8000/chat/friend-requests/4/
+Content-Type: application/json
+Authorization: Token  2bbb8fe4e92a2b2270b8f5883ed133ec9c3e9560
+
+{
+    "action" : "accept"
+}
+#### get patch /chat/friend-requests/
+get  http://localhost:8000/chat/friend-requests/4/
+Content-Type: application/json
+Authorization: Token  2bbb8fe4e92a2b2270b8f5883ed133ec9c3e9560
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+
+# --- Django Core ---
+Django==5.1.6
+djangorestframework==3.15.2
+asgiref==3.8.1
+sqlparse==0.5.3
+tzdata==2025.1
+
+# --- PostgreSQL Support ---
+psycopg2-binary==2.9.10
+
+# --- JWT & Authentication ---
+djangorestframework-simplejwt==5.3.1
+djangorestframework-authtoken==1.2.0
+
+# --- CORS Support ---
+django-cors-headers==4.7.0
+
+# --- Filtering Support ---
+django-filter==24.2
+
+# --- Media File Support ---
+Pillow==10.3.0  # للتعامل مع الصور والملفات
+
+# --- Tagging Support ---
+django-taggit==5.0.1
+
+# --- Deployment/Production ---
+gunicorn==21.2.0          # لتشغيل السيرفر
+whitenoise==6.6.0         # لتقديم static files
+python-dotenv==1.0.1      # لتخزين بيانات حساسة في .env

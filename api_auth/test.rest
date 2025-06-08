@@ -1,0 +1,131 @@
+# should install 'REST Client' extintion in Visual Studio Code
+
+###
+
+
+POST http://127.0.0.1:8000//auth/login
+Content-Type: application/json
+
+{
+  "password" : "Pass123!" ,
+  "email":"dx057354@gmail.com"
+}
+
+###
+
+POST http://127.0.0.1:8000/auth/signup
+Content-Type: application/json
+
+{
+  "username": "hassan123453",
+  "password": "password123456",
+  "email": "h1312@gmail.com",
+  "age": 30,
+  "phone": "123-456-7890",
+  "city": "Cairo",
+  "medical_insurance": true,
+  "region": "Nasr City",
+  "gender": "male"
+
+}
+
+###
+
+POST http://127.0.0.1:8000/auth/signup-doctor
+Content-Type: application/json
+
+{
+    "user": {
+        "username": "doctor1132121",
+        "email": "hasandoctor@gmail.com", 
+        "password": "test123",
+        "age": 35,
+        "phone": "1234567890",
+        "city": "Cairo",
+        "region": "Nasr City",
+        "gender": "male"
+    },
+    "specialization": "Cardiology",
+    "practice_permit": "CA-123"
+}
+
+
+###
+
+
+
+GET  http://127.0.0.1:8000/auth/test-token
+Content-Type: application/json
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzA2MTc3LCJpYXQiOjE3NDQzMDI1NzcsImp0aSI6ImE3YTgxZjNiNDJjOTQxZTg4MGUyNmNmZTk0NGI5OWQ3IiwidXNlcl9pZCI6MX0.OGAvtHnkTOF3raG2pD0af8bAQqMrg4hFlNO6oj9pDKI
+
+
+
+
+###
+
+PATCH   http://127.0.0.1:8000/auth/update-user/
+Content-Type: multipart/form-data
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzE5MzgwLCJpYXQiOjE3NDQzMTU3ODAsImp0aSI6ImVlNzQ1ZjlhM2JkNjQwM2M5YWUwOTFhYTIzZmZlNGFkIiwidXNlcl9pZCI6MTd9.hmBCRbxaJmVg3rRKmqRv7RMYq98w9wF5r2IqKqrZpsI
+
+{
+    "city": "how",
+    "age": 1
+  }
+
+###
+
+PUT   http://127.0.0.1:8000/auth/update-user/
+Content-Type: application/json
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzE5MzgwLCJpYXQiOjE3NDQzMTU3ODAsImp0aSI6ImVlNzQ1ZjlhM2JkNjQwM2M5YWUwOTFhYTIzZmZlNGFkIiwidXNlcl9pZCI6MTd9.hmBCRbxaJmVg3rRKmqRv7RMYq98w9wF5r2IqKqrZpsI
+
+{
+    "city": "New York city",
+    "age": 551
+  }
+#### not working 
+  # "detail": "Multipart form parse error - Invalid boundary in multipart: None"
+PATCH   http://127.0.0.1:8000/auth/update-user/
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzE5MzgwLCJpYXQiOjE3NDQzMTU3ODAsImp0aSI6ImVlNzQ1ZjlhM2JkNjQwM2M5YWUwOTFhYTIzZmZlNGFkIiwidXNlcl9pZCI6MTd9.hmBCRbxaJmVg3rRKmqRv7RMYq98w9wF5r2IqKqrZpsI
+
+{
+    "profile_picture":"@/path/to/photo.jpg"
+  }
+### not working 
+#  File "H:\Hassan\Software Engneering folder\DEV\Superdoctor\backend\api_auth\views.py", line 166, in forgot_password
+#     PasswordResetToken.objects.filter(user=user).delete()
+#     ^^^^^^^^^^^^^^^^^^
+# NameError: name 'PasswordResetToken' is not defined
+# [10/Apr/2025 18:36:45] "POST /auth/forgot-password/ HTTP/1.1" 500 101963
+
+POST    http://127.0.0.1:8000/auth/forgot-password/
+Content-Type: application/json
+
+
+{"email": "hh4430219@gmail.com"}
+### not working
+
+Post     http://127.0.0.1:8000/auth/reset-password/
+Content-Type: application/json
+
+
+{
+  "token": "156364efedfb4cfbaec6bb09e998bcb0",
+ "new_password": "12345612"
+ }
+
+
+
+####
+
+DELETE http://localhost:8000/api/delete-account/
+
+Content-Type: application/json
+Authorization:  Bearer 
+
+###
+
+# POST http://localhost:8000/api/google-auth/ 
+# Content-Type: application/json
+# Authorization:  Bearer
+
+# {"id_token": "GOOGLE_ID_TOKEN"}

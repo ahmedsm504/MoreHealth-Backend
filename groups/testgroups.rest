@@ -1,0 +1,139 @@
+#### GET, PUT, PATCH, DELETE,
+GET http://127.0.0.1:8000/groups/30/
+Content-Type: multipart/form-data
+Authorization:Token 272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+{
+    "name": "2 groups update ",
+    "description": "this is secend groups "
+    
+}
+
+
+
+#### GET, POST 
+
+POST  http://127.0.0.1:8000/groups/
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+{
+    "name": " groups hello 11 ",
+    "description": "this is secend groups ", 
+    "image" : '',
+    "tags" : "hell"
+
+}
+###
+
+POST http://127.0.0.1:8000/groups/
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Authorization: Token 272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="name"
+
+Medical Group 12
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="description"
+
+this is second groups
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="tags"
+
+health,medical,advice
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+###
+
+curl -X POST http://127.0.0.1:8000/groups/ \
+  -H "Authorization: Token 272ae53c71d2a1de392bbc9b8aca316dd8f3563f" \
+  -F "name"=Medical Group11" \
+  -F "description"=Health discussion group" \
+  -F "tags=health,medical,advice"
+
+### add or removed toggle status# POST
+
+Post http://127.0.0.1:8000/groups/1/join/
+Content-Type: application/json
+Authorization:Token 272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+
+
+
+####GET, POST 
+
+get http://127.0.0.1:8000/groups/2/questions/
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+{
+    "title": "question ",
+    "content": "this is secend groups "
+}
+####GET, PUT, PATCH, DELETE
+
+get http://localhost:8000/groups/questions/5/
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+
+
+
+###  comment GET, POST
+
+get   http://localhost:8000/groups/questions/6/comments/
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+{
+    "content" : "this is comment"
+}
+###  Post and get only 
+
+get  http://localhost:8000/groups/comments/10/replies/
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+{
+  "content": "this is replay."
+  
+}
+
+###  Post only to vote toggle add or remove /(comment or question)/ #
+
+POST  http://localhost:8000/groups/upvote/comment/10/
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+###
+
+patch http://localhost:8000/groups/comments/12/
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+###################################### To filter and search exmples 
+
+###
+
+GET http://localhost:8000/groups/?member=hassan
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+###
+
+GET http://localhost:8000/groups/questions/3
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+
+###
+
+###
+
+GET http://localhost:8000/groups/questions/?search=question
+Content-Type: application/json
+Authorization: Token  272ae53c71d2a1de392bbc9b8aca316dd8f3563f
+
+
+
+
+
