@@ -107,14 +107,11 @@ WSGI_APPLICATION = 'superDoctor.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',  # اسم قاعدة البيانات
-        'USER': 'postgres.glzlujdqhmxpyzbagsir',  # اسم المستخدم
-        'PASSWORD': 'samirsaid012700',  # كلمة المرور
-        'HOST': 'aws-0-eu-central-1.pooler.supabase.com',  # عنوان السيرفر
-        'PORT': '5432',  # المنفذ
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
     }
 }
+
 
 
 # Password validation
