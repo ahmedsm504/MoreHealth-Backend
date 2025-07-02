@@ -4,7 +4,6 @@ MoreHealth is an AI-driven health assistant platform where users interact with a
 ## High-Level Architecture
 
 * **Backend**: Django (5) with PostgreSQL database, using Django REST Framework for API endpoints
-* **Frontend**: React (19) with modern hooks and state management
 * **Authentication**: JWT-based security with email verification
 * **Communication**: Real-time chat system (Socket.IO) and community forum
 
@@ -26,21 +25,9 @@ MoreHealth is an AI-driven health assistant platform where users interact with a
   * `psycopg2-binary` for PostgreSQL adapter
   * `gunicorn` for production WSGI
 
-### Frontend Stack
-* **Node.js 16+**
-* **React (latest stable)**
-* **Tailwind CSS (styling)**
-* **React Context API (state management)**
-* **React Router (client-side routing)**
-* **Axios (HTTP requests)**
-* **React Query(remote statu)**
-
-
 
 ### Development Tooling
 
-* **Node.js 16+**
-* **npm 8+**
 * **Python virtualenv**
 * **pip / virtualenv**
 * **PostgreSQL client**
@@ -84,27 +71,10 @@ MoreHealth is an AI-driven health assistant platform where users interact with a
      python manage.py runserver
      ```
 
-3. **Frontend Setup**
 
-   ```bash
-   cd client
-   npm install      # or yarn install
-   ```
-
-   * Create a `.env` in the `client/` directory:
-
-     ```ini
-     REACT_APP_API_URL=http://localhost:8000/api
-     ```
-   * Start the React development server:
-
-     ```bash
-     npm start        # or yarn start
-     ```
 
 4. **Access the Application**
 
-   * Frontend: `http://localhost:3000`
    * API: `http://localhost:8000/`
    * sign up as doctor : `http://127.0.0.1:8000/auth/signup-doctor`
    * sign up as regleur user : `http://127.0.0.1:8000/auth/signup`
@@ -126,7 +96,6 @@ MoreHealth is an AI-driven health assistant platform where users interact with a
 ### User Profile Management
 
 * **Profile Editing**: Update personal details and preferences
-* **Avatar System**: Upload, crop, and remove profile pictures
 * **Account Deletion**: Secure removal with confirmation workflow
 
 ### Social & Notifications
