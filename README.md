@@ -157,36 +157,3 @@ MoreHealth is an AI-driven health assistant platform where users interact with a
 * Role assignment for verified doctors with elevated permissions
 
 
-
----
-# screen and video 
-
-![home Page](screenshots/homepage.png)
-### Commenity
-![groups Page](screenshots/groups.png)
-![quetion Page](screenshots/quetion.png)
-![ verify doctor ](screenshots/verify_doctor.png)
-### Auth
-![ login page](screenshots/login.png)
-![ signup page](screenshots/signup.png)
-### Chat and Frinds
-![ friend reqest page](screenshots/friend-reqest.png)
-![ chat-message page](screenshots/chat-message.png)
-![ chat-room page](screenshots/chat-chatroom.png)
-
-### AI and deep learing model
-![ chat bot page](screenshots/chatbot.jpg)
-![ medical-symptom-analyzer page](screenshots/medical-symptom-analyzer.png)
-
-### video 
-
-<video width="600" controls  width="700" controls autoplay>
-  <source src="screenshots/morehealth.MP4" type="video/mp4">
-</video>
-
-Download 
-![ healthmore video](screenshots/morehealth.MP4)
-
-Or Youtube  [link](https://youtu.be/SjC81bYbjKM?si=FislHnPxG2mNxOyn)
-
-
